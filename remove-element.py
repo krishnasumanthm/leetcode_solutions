@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 class Solution:
     # @param A a list of integers
     # @param elem an integer, value need to be removed
