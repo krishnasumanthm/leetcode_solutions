@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 class Solution:
     # @param n, an integer
     # @return an integer
