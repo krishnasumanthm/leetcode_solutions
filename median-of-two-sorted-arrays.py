@@ -6,13 +6,13 @@ class Solution:
             return self.kth(A, B, l // 2)
         else:
             return (self.kth(A, B, l // 2) + self.kth(A, B, l // 2 - 1)) / 2.
-    
     #Code for getting kth element in the combined array
     def kth(self, a, b, k):
         if not a:
             return b[k]
         if not b:
             return a[k]
+        assert not(len(a) == 0 and len(b) == 0)
         ind_a, ind_b = len(a) // 2 , len(b) // 2
         val_a, val_b = a[ind_a], b[ind_b]
     
@@ -26,3 +26,4 @@ class Solution:
                 return self.kth(a[:ind_a], b, k)
             else:
                 return self.kth(a, b[:ind_b], k)
+                
