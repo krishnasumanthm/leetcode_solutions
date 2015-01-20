@@ -26,4 +26,4 @@ class Solution:
             ptr4 = ptr4.next
         return ptr3
             
-        
+         
