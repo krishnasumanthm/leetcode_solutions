@@ -12,14 +12,13 @@ class Solution:
         if not root:
             return True
         q = [[root.left, root.right]]
-        while q:
-            temp = q.pop(0)
-            if not (temp[0] or temp[1]):
-                continue
-            elif (temp[0] and temp[1]) and temp[0].val == temp[1].val:
-                q.append([temp[0].left, temp[1].right])
-                q.append([temp[0].right, temp[1].left])
+        while len(q) != 0:
+            temp1, temp2 = q.pop(0)
+            if not (temp1 or temp2):
+                continue 
+            elif (temp1 and temp2) and temp1.val == temp2.val:
+                q.append([temp1.left, temp2.right])
+                q.append([temp1.right, temp2.left])
             else:   
                 return False
         return True
-            
